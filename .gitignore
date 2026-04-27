@@ -1,0 +1,12 @@
+# Override global ~/.gitignore_global — this is a static site repo,
+# we need html/css/js/png/etc to commit.
+!*.html
+!*.css
+!*.js
+!*.json
+!*.png
+!*.jpg
+!*.jpeg
+!*.svg
+!*.txt
+!*.ico

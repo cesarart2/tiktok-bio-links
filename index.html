@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>R2D2 — aceites y bienestar</title>
+<meta name="description" content="Mis enlaces favoritos: aromas naturales, aceites esenciales y bienestar." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Cloudflare Web Analytics: paste real token here after Cloudflare setup -->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_ME"}'></script> -->
+<style>
+  :root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --text: #1f1d2b;
+    --muted: #6b6878;
+    --accent: #b9a4d6;
+    --accent-deep: #7c5db8;
+    --border: rgba(124, 93, 184, 0.12);
+    --shadow: 0 1px 2px rgba(31,29,43,0.04), 0 4px 12px rgba(124,93,184,0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    padding: 32px 20px 40px;
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    width: 100%;
+    max-width: 460px;
+  }
+  .profile {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.5px;
+    box-shadow: 0 4px 16px rgba(124,93,184,0.25);
+  }
+  .name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+  }
+  .handle {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .bio {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .link {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .link:hover, .link:active {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+    box-shadow: 0 2px 4px rgba(31,29,43,0.04), 0 8px 20px rgba(124,93,184,0.12);
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(185, 164, 214, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .text { flex: 1; min-width: 0; }
+  .label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
+  .desc {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .arrow {
+    color: var(--muted);
+    flex-shrink: 0;
+    opacity: 0.5;
+  }
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="profile">
+    <div class="avatar" aria-hidden="true">R2</div>
+    <h1 class="name">R2D2</h1>
+    <p class="handle">@cbrPP</p>
+    <p class="bio">Aromas naturales, aceites esenciales y bienestar diario.</p>
+  </section>
+
+  <nav class="links">
+    <a class="link" href="/go/wyld/" rel="noopener">
+      <span class="icon">🌿</span>
+      <span class="text">
+        <div class="label">Perfume natural — Wyld Notes</div>
+        <div class="desc">Un aroma que calma</div>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+
+    <a class="link" href="/go/lavender/" rel="noopener">
+      <span class="icon">💜</span>
+      <span class="text">
+        <div class="label">Aceite de lavanda</div>
+        <div class="desc">Para dormir mejor</div>
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </nav>
+
+  <footer>
+    Sígueme en TikTok · @cbrPP
+  </footer>
+</main>
+</body>
+</html>
