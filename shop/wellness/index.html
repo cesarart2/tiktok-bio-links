@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>EarthVive — Shop Clean Wellness</title>
+<meta name="description" content="The natural fragrance and wellness picks I actually use." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Cloudflare Web Analytics: paste real token here after setup -->
+<!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "REPLACE_ME"}'></script> -->
+<style>
+  :root {
+    --bg: #f7f6f1;
+    --card: #ffffff;
+    --text: #20271d;
+    --muted: #6a7560;
+    --accent: #8aa873;
+    --accent-deep: #5f7e49;
+    --border: rgba(95, 126, 73, 0.16);
+    --shadow: 0 1px 2px rgba(32,39,29,0.04), 0 6px 18px rgba(95,126,73,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    padding: 0 20px 48px;
+    display: flex;
+    justify-content: center;
+  }
+  main { width: 100%; max-width: 480px; }
+  header { text-align: center; padding: 36px 0 8px; }
+  .logo {
+    width: 76px; height: 76px; border-radius: 20px; object-fit: cover;
+    box-shadow: 0 6px 18px rgba(95,126,73,0.18); margin: 0 auto 14px; display: block;
+  }
+  h1 { font-size: 23px; font-weight: 800; letter-spacing: -0.4px; }
+  .tagline { color: var(--muted); font-size: 14.5px; margin-top: 6px; max-width: 340px; margin-inline: auto; }
+  .disclosure {
+    margin: 18px auto 22px; max-width: 360px;
+    background: rgba(138,168,115,0.10); border: 1px solid var(--border);
+    color: var(--accent-deep); font-size: 11.5px; font-weight: 500;
+    text-align: center; padding: 9px 14px; border-radius: 12px;
+  }
+  .links { display: flex; flex-direction: column; gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    padding: 18px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 14px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(32,39,29,0.05), 0 12px 26px rgba(95,126,73,0.14); }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .icon {
+    width: 52px; height: 52px; border-radius: 15px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+    display: flex; align-items: center; justify-content: center; font-size: 26px;
+  }
+  .info { flex: 1; min-width: 0; }
+  .name { font-weight: 700; font-size: 16px; }
+  .desc { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .btn {
+    display: block; text-align: center; text-decoration: none;
+    background: var(--accent-deep); color: #fff; font-weight: 700; font-size: 15px;
+    padding: 13px; border-radius: 13px; letter-spacing: 0.2px;
+    transition: background .15s ease;
+  }
+  .btn:hover, .btn:active { background: #50703c; }
+  .pill { display:inline-block; font-size:11px; font-weight:700; color:#fff; background:var(--accent-deep); padding:2px 9px; border-radius:999px; margin-left:6px; vertical-align:middle; }
+  footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
+  footer a { color: var(--accent-deep); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="logo" src="https://i.ibb.co/whKvdC63/Same-Earth-Vive-logo-202603232112-png-202603281313.jpg" alt="EarthVive" />
+    <h1>EarthVive — Clean Wellness</h1>
+    <p class="tagline">The natural fragrance and wellness picks I actually use every day.</p>
+  </header>
+
+  <p class="disclosure">Some links are affiliate links. As an Amazon Associate I earn from qualifying purchases. #ad</p>
+
+  <nav class="links">
+    <div class="card">
+      <div class="row">
+        <span class="icon">🤍</span>
+        <span class="info">
+          <div class="name">Wyld Notes Natural Perfume<span class="pill">10% OFF</span></div>
+          <div class="desc">Clean natural fragrance — the discount applies through this link.</div>
+        </span>
+      </div>
+      <a class="btn" href="/go/wyld/?src=shop-wellness" rel="noopener">Shop Wyld Notes →</a>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <span class="icon">💜</span>
+        <span class="info">
+          <div class="name">Lavender Essential Oil</div>
+          <div class="desc">For winding down and better sleep.</div>
+        </span>
+      </div>
+      <a class="btn" href="/go/lavender/?src=shop-wellness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <span class="icon">🕯️</span>
+        <span class="info">
+          <div class="name">Frankincense Oil</div>
+          <div class="desc">Calming, grounding — a daily reset for the senses.</div>
+        </span>
+      </div>
+      <a class="btn" href="/go/incienso/?src=shop-wellness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+  </nav>
+
+  <footer>
+    As an Amazon Associate I earn from qualifying purchases.<br>
+    EarthVive · clean wellness &amp; natural fragrance
+  </footer>
+</main>
+</body>
+</html>
