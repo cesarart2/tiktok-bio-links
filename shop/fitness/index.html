@@ -76,6 +76,29 @@
     transition: background .15s ease;
   }
   .btn:hover, .btn:active { background: #0b7d72; }
+
+  /* quick-jump area filters */
+  .filters {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    padding: 12px 0 14px; margin-bottom: 4px;
+    background: linear-gradient(var(--bg) 70%, rgba(246,248,249,0));
+  }
+  .chip {
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--accent-deep); font: inherit; font-size: 13px; font-weight: 600;
+    padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    transition: background .12s ease, color .12s ease, border-color .12s ease;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip[aria-pressed="true"] { background: var(--accent-deep); color: #fff; border-color: var(--accent-deep); }
+  .card[hidden] { display: none; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag {
+    font-size: 11px; font-weight: 600; color: var(--accent-deep);
+    background: rgba(20,184,166,0.10); border-radius: 8px; padding: 3px 9px;
+  }
+  .empty { text-align: center; color: var(--muted); font-size: 14px; padding: 24px 0; display: none; }
   footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
   footer a { color: var(--accent-deep); text-decoration: none; font-weight: 600; }
 </style>
@@ -90,8 +113,18 @@
 
   <p class="disclosure">As an Amazon Associate I earn from qualifying purchases. #ad</p>
 
+  <div class="filters" role="group" aria-label="Filter by target area">
+    <button class="chip" data-filter="all" aria-pressed="true">All</button>
+    <button class="chip" data-filter="arms" aria-pressed="false">Arms</button>
+    <button class="chip" data-filter="legs" aria-pressed="false">Legs &amp; Glutes</button>
+    <button class="chip" data-filter="core" aria-pressed="false">Core &amp; Back</button>
+    <button class="chip" data-filter="cardio" aria-pressed="false">Cardio</button>
+    <button class="chip" data-filter="recovery" aria-pressed="false">Recovery</button>
+    <button class="chip" data-filter="wear" aria-pressed="false">What to Wear</button>
+  </div>
+
   <nav class="links">
-    <div class="card">
+    <div class="card" data-tags="legs arms">
       <div class="row">
         <span class="icon">🏋️</span>
         <span class="info">
@@ -99,10 +132,11 @@
           <div class="desc">Low-impact toning — wear them on your walk + 3 easy moves.</div>
         </span>
       </div>
+      <div class="tags"><span class="tag">Legs &amp; Glutes</span><span class="tag">Arms</span></div>
       <a class="btn" href="/go/ankleweights/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-tags="arms legs core">
       <div class="row">
         <span class="icon">💪</span>
         <span class="info">
@@ -110,32 +144,11 @@
           <div class="desc">Sculpt arms &amp; glutes at home — no heavy weights needed.</div>
         </span>
       </div>
+      <div class="tags"><span class="tag">Arms</span><span class="tag">Legs &amp; Glutes</span><span class="tag">Core &amp; Back</span></div>
       <a class="btn" href="/go/bands/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
     </div>
 
-    <div class="card">
-      <div class="row">
-        <span class="icon">👟</span>
-        <span class="info">
-          <div class="name">My Workout Outfit</div>
-          <div class="desc">The set that actually makes you want to move.</div>
-        </span>
-      </div>
-      <a class="btn" href="/go/outfit/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
-    </div>
-
-    <div class="card">
-      <div class="row">
-        <span class="icon">💆</span>
-        <span class="info">
-          <div class="name">Foam Roller</div>
-          <div class="desc">5-minute reset for stiff, achy muscles &amp; hips.</div>
-        </span>
-      </div>
-      <a class="btn" href="/go/foamroller/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
-    </div>
-
-    <div class="card">
+    <div class="card" data-tags="core legs arms">
       <div class="row">
         <span class="icon">🧘</span>
         <span class="info">
@@ -143,10 +156,11 @@
           <div class="desc">Full-body, low-impact toning — bar + resistance bands.</div>
         </span>
       </div>
+      <div class="tags"><span class="tag">Core &amp; Back</span><span class="tag">Legs &amp; Glutes</span><span class="tag">Arms</span></div>
       <a class="btn" href="/go/pilatesbar/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
     </div>
 
-    <div class="card">
+    <div class="card" data-tags="cardio legs">
       <div class="row">
         <span class="icon">🤸</span>
         <span class="info">
@@ -154,14 +168,66 @@
           <div class="desc">Low-impact cardio that's easy on the knees.</div>
         </span>
       </div>
+      <div class="tags"><span class="tag">Cardio</span><span class="tag">Legs &amp; Glutes</span></div>
       <a class="btn" href="/go/rebounder/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
     </div>
+
+    <div class="card" data-tags="recovery">
+      <div class="row">
+        <span class="icon">💆</span>
+        <span class="info">
+          <div class="name">Foam Roller</div>
+          <div class="desc">5-minute reset for stiff, achy muscles &amp; hips.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Recovery</span></div>
+      <a class="btn" href="/go/foamroller/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="wear">
+      <div class="row">
+        <span class="icon">👟</span>
+        <span class="info">
+          <div class="name">My Workout Outfit</div>
+          <div class="desc">The set that actually makes you want to move.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">What to Wear</span></div>
+      <a class="btn" href="/go/outfit/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
   </nav>
+
+  <p class="empty" id="empty">Nothing here yet — more coming soon.</p>
 
   <footer>
     As an Amazon Associate I earn from qualifying purchases.<br>
     TrimTina · at-home fitness for women 40+
   </footer>
 </main>
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.chip');
+    var cards = document.querySelectorAll('.card');
+    var empty = document.getElementById('empty');
+    function apply(filter) {
+      var shown = 0;
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute('data-tags') || '').split(' ');
+        var match = filter === 'all' || tags.indexOf(filter) !== -1;
+        card.hidden = !match;
+        if (match) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+        chip.setAttribute('aria-pressed', 'true');
+        apply(chip.getAttribute('data-filter'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
