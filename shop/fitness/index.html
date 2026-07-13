@@ -99,6 +99,7 @@
     background: rgba(20,184,166,0.10); border-radius: 8px; padding: 3px 9px;
   }
   .empty { text-align: center; color: var(--muted); font-size: 14px; padding: 24px 0; display: none; }
+  .pill { display:inline-block; font-size:11px; font-weight:700; color:#fff; background:var(--accent-deep); padding:2px 9px; border-radius:999px; margin-left:6px; vertical-align:middle; }
   footer { margin-top: 30px; text-align: center; color: var(--muted); font-size: 11.5px; line-height: 1.6; }
   footer a { color: var(--accent-deep); text-decoration: none; font-weight: 600; }
 </style>
@@ -120,10 +121,22 @@
     <button class="chip" data-filter="core" aria-pressed="false">Core &amp; Back</button>
     <button class="chip" data-filter="cardio" aria-pressed="false">Cardio</button>
     <button class="chip" data-filter="recovery" aria-pressed="false">Recovery</button>
+    <button class="chip" data-filter="nutrition" aria-pressed="false">Nutrition</button>
     <button class="chip" data-filter="wear" aria-pressed="false">What to Wear</button>
   </div>
 
   <nav class="links">
+    <div class="card" data-tags="arms legs core cardio recovery nutrition wear">
+      <div class="row">
+        <span class="icon">📥</span>
+        <span class="info">
+          <div class="name">The Menopause Belly Reset<span class="pill">FREE</span></div>
+          <div class="desc">My free 7-day plan — a named move + a high-protein meal every day, plus a printable tracker.</div>
+        </span>
+      </div>
+      <a class="btn" href="/go/bellyreset/?src=shop-fitness" rel="noopener">Download the Free Plan →</a>
+    </div>
+
     <div class="card" data-tags="legs arms">
       <div class="row">
         <span class="icon">🏋️</span>
@@ -219,6 +232,78 @@
       </div>
       <div class="tags"><span class="tag">What to Wear</span></div>
       <a class="btn" href="/go/zip-hoodie/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">🥄</span>
+        <span class="info">
+          <div class="name">Ancient Nutrition Multi Collagen Peptides (Unflavored)</div>
+          <div class="desc">Unflavored collagen protein — stirs into oats, yogurt, or a smoothie.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/proteinpowder/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">🥤</span>
+        <span class="info">
+          <div class="name">BlenderBottle Classic V2 Shaker Bottle</div>
+          <div class="desc">Leakproof bottle with the whisk ball for lump-free protein shakes.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/shaker/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">🥡</span>
+        <span class="info">
+          <div class="name">Vtopmart Glass Meal-Prep Containers (8-pack)</div>
+          <div class="desc">Glass containers with airtight lids for a week of high-protein lunches.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/mealprep/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">⚖️</span>
+        <span class="info">
+          <div class="name">Etekcity Digital Kitchen Scale</div>
+          <div class="desc">Weigh your portions so you actually hit your protein target.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/kitchenscale/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">🫙</span>
+        <span class="info">
+          <div class="name">Paksh Wide-Mouth Glass Mason Jars 64oz (4-pack)</div>
+          <div class="desc">Wide-mouth glass jars — perfect for overnight oats and prep.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/oatjars/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
+    </div>
+
+    <div class="card" data-tags="nutrition">
+      <div class="row">
+        <span class="icon">🥛</span>
+        <span class="info">
+          <div class="name">Ninja Fit Compact Personal Blender</div>
+          <div class="desc">Personal blender with to-go cups for fast protein smoothies.</div>
+        </span>
+      </div>
+      <div class="tags"><span class="tag">Nutrition</span></div>
+      <a class="btn" href="/go/blender/?src=shop-fitness" rel="noopener sponsored">Shop on Amazon →</a>
     </div>
 
   <p class="empty" id="empty">Nothing here yet — more coming soon.</p>
