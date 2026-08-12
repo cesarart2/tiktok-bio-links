@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://amzn.to/44Bws2l">
-<title>Redirecting…</title>
+<title>Redirigiendo…</title>
+<noscript><meta http-equiv="refresh" content="0; url=https://www.amazon.com/dp/B08CFWDQX1?tag=r2d2vive-20"></noscript>
+<script>
+(function () {
+  var base = "https://www.amazon.com/dp/B08CFWDQX1";
+  var tag = "r2d2vive-20";               // channel default
+  var src = (location.search.match(/[?&]src=([^&]*)/) || [])[1] || "";
+  if (/^fb/.test(src)) tag = "r2d2fb-20";          // Facebook crossposts
+  else if (/^shop/.test(src)) tag = "cesardelapied-20"; // /shop hub browsing
+  location.replace(base + "?tag=" + tag + (src ? "&ascsubtag=" + encodeURIComponent(src) : ""));
+})();
+</script>
 </head>
 <body>
-<p>Redirecting to Amazon… <a href="https://amzn.to/44Bws2l">Continue</a></p>
+<p>Redirigiendo a Amazon… <a href="https://www.amazon.com/dp/B08CFWDQX1?tag=r2d2vive-20">Continuar</a></p>
 </body>
 </html>
