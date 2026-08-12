@@ -1,0 +1,11 @@
+name = "go-click-logger"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+workers_dev = false
+routes = [
+  { pattern = "r2d2links.livehealthylovelife.com/go/*", zone_name = "livehealthylovelife.com" }
+]
+
+[[analytics_engine_datasets]]
+binding = "GO_CLICKS"
+dataset = "go_clicks"
