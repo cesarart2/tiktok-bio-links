@@ -10,3 +10,7 @@
 !*.svg
 !*.txt
 !*.ico
+
+# Wrangler's local cache — holds wrangler-account.json (Cloudflare account ID).
+# Never commit it. The tracked worker/wrangler.toml is config only, no secrets.
+.wrangler/
