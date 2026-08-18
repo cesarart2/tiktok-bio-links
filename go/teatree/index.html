@@ -1,22 +1,63 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Redirigiendo…</title>
-<noscript><meta http-equiv="refresh" content="0; url=https://www.amazon.com/dp/B087PCV3TP?tag=r2d2vive-20"></noscript>
-<script>
-(function () {
-  var base = "https://www.amazon.com/dp/B087PCV3TP";
-  var tag = "r2d2vive-20";               // channel default
-  var src = (location.search.match(/[?&]src=([^&]*)/) || [])[1] || "";
-  if (/^fb/.test(src)) tag = "r2d2fb-20";          // Facebook crossposts
-  else if (/^shop/.test(src)) tag = "cesardelapied-20"; // /shop hub browsing
-  location.replace(base + "?tag=" + tag + (src ? "&ascsubtag=" + encodeURIComponent(src) : ""));
-})();
-</script>
+<title>Continue to Amazon — Tea tree oil</title>
+<style>
+  :root {
+    --bg: #f6f8f9; --card: #ffffff; --text: #11231f; --muted: #5f7470;
+    --accent-deep: #0d9488; --border: rgba(13, 148, 136, 0.14);
+    --shadow: 0 1px 2px rgba(17,35,31,0.04), 0 6px 18px rgba(13,148,136,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased;
+    display: flex; align-items: center; justify-content: center; padding: 24px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    box-shadow: var(--shadow); padding: 28px 24px; max-width: 380px; width: 100%;
+    text-align: center;
+  }
+  h1 { font-size: 19px; line-height: 1.35; font-weight: 700; margin-bottom: 8px; }
+  .lead { font-size: 14px; color: var(--muted); line-height: 1.5; margin-bottom: 20px; }
+  .btn {
+    display: block; background: var(--accent-deep); color: #fff; font-weight: 700;
+    font-size: 15px; padding: 14px; border-radius: 13px; letter-spacing: 0.2px;
+    text-decoration: none; transition: background .15s ease;
+  }
+  .btn:hover, .btn:active { background: #0b7d72; }
+  .back { display: inline-block; margin-top: 16px; font-size: 13px; color: var(--muted); text-decoration: none; }
+  .back:hover { color: var(--accent-deep); }
+  .disc { margin-top: 20px; font-size: 11px; color: var(--muted); line-height: 1.45; }
+</style>
 </head>
 <body>
-<p>Redirigiendo a Amazon… <a href="https://www.amazon.com/dp/B087PCV3TP?tag=r2d2vive-20">Continuar</a></p>
+<main class="card">
+  <h1>Tea tree oil</h1>
+  <p class="lead">Opens this product on Amazon.com in the same tab.</p>
+  <a id="go" class="btn" href="https://www.amazon.com/dp/B087PCV3TP?tag=r2d2vive-20" rel="nofollow sponsored noopener">Continue to Amazon →</a>
+  <a class="back" href="/shop/wellness/">← Back to the shop</a>
+  <p class="disc">As an Amazon Associate I earn from qualifying purchases.</p>
+</main>
+<script>
+(function () {
+  // Tag the outbound link by traffic source. No redirect: the click below is
+  // the customer's affirmative action, which is what keeps this off Amazon's
+  // "Redirecting Link" exclusion list.
+  var base = "https://www.amazon.com/dp/B087PCV3TP";
+  var tag = "r2d2vive-20";                                  // channel default
+  var src = (location.search.match(/[?&]src=([^&]*)/) || [])[1] || "";
+  if (/^fb/.test(src)) tag = "r2d2fb-20";                // Facebook crossposts
+  else if (/^shop/.test(src)) tag = "cesardelapied-20";  // /shop hub browsing
+  var sep = base.indexOf("?") === -1 ? "?" : "&";
+  document.getElementById("go").href =
+    base + sep + "tag=" + tag + (src ? "&ascsubtag=" + encodeURIComponent(src) : "");
+})();
+</script>
 </body>
 </html>
