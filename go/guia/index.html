@@ -26,11 +26,11 @@
   li { counter-increment: s; position: relative; padding-left: 34px; margin-bottom: 12px; font-size: 15px; }
   li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; border-radius: 50%;
                background: var(--accent); color: var(--accent-fg); font-weight: 700; font-size: 13px; text-align: center; line-height: 24px; }
-  /* Drawing of Gumroad's English buy box, so it looks familiar when they get there */
+  /* Drawing of Gumroad's checkout box, so it looks familiar when they get there */
   .mock { margin: 6px 0 10px; background: #fff; color: #000; border: 1px solid #ddd; border-radius: 10px; padding: 12px; font-size: 13px; }
   .mock .field { margin-top: 6px; border: 2px solid #000; border-radius: 6px; padding: 6px 10px; color: #888; }
   .mock .field b { color: #e0115f; }
-  .mock .buy { margin-top: 8px; background: #ff90e8; border: 2px solid #000; border-radius: 6px; padding: 7px; text-align: center; font-weight: 700; }
+  .mock .buy { margin-top: 8px; background: #000; color: #fff; border: 2px solid #000; border-radius: 6px; padding: 7px; text-align: center; font-weight: 700; }
   .note { font-size: 13px; color: var(--muted); text-align: center; margin-top: 4px; }
   .bottom { margin-top: 16px; }
   .back { display: block; text-align: center; margin-top: 14px; font-size: 13px; color: var(--muted); text-decoration: none; }
@@ -42,24 +42,24 @@
   <span class="tag">GRATIS</span>
   <h1>Perfume Sin Tóxicos</h1>
   <p class="sub">Checklist gratis · 10 claves para elegir un perfume natural</p>
-  <a class="btn" href="https://stonekeeper860.gumroad.com/l/perfume-sin-toxicos" rel="noopener">Descargar la guía gratis →</a>
+  <a class="btn" href="https://stonekeeper860.gumroad.com/l/perfume-sin-toxicos?wanted=true&amp;price=0" rel="noopener">Descargar la guía gratis →</a>
 
   <section class="card">
-    <h2>Cómo descargarlo gratis (30 segundos)</h2>
+    <h2>Cómo descargarlo gratis (20 segundos)</h2>
     <ol>
-      <li>Toca el botón rosa <b>«I want this!»</b>. La página está en inglés, pero <b>no pagas nada</b>: deja el precio vacío (o pon 0).</li>
+      <li>Toca el botón de arriba. Se abre la página de descarga (en inglés) con <b>Total US$0</b>.</li>
       <li>Escribe tu correo y toca <b>«Get»</b>.</li>
       <li>El PDF se abre al momento y también te llega al correo. Guárdalo en tu teléfono.</li>
     </ol>
     <div class="mock" aria-hidden="true">
-      Name a fair price:
-      <div class="field">$ <b>← déjalo vacío o pon 0</b></div>
-      <div class="buy">I want this!</div>
+      Total <b style="float:right;color:#000">US$0</b>
+      <div class="field">Email address <b>← tu correo</b></div>
+      <div class="buy">Get</div>
     </div>
     <p class="note">Sin tarjeta. Sin pagos.</p>
   </section>
 
-  <a class="btn bottom" href="https://stonekeeper860.gumroad.com/l/perfume-sin-toxicos" rel="noopener">Descargar la guía gratis →</a>
+  <a class="btn bottom" href="https://stonekeeper860.gumroad.com/l/perfume-sin-toxicos?wanted=true&amp;price=0" rel="noopener">Descargar la guía gratis →</a>
   <a class="back" href="/">← Volver</a>
 </main>
 </body>
