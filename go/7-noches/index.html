@@ -42,25 +42,21 @@
   <span class="tag">GRATIS</span>
   <h1>Duerme mejor en 7 noches: un paso cada noche</h1>
   <p class="sub">PDF gratis · 11 páginas · en español</p>
-  <a class="btn" href="https://stonekeeper860.gumroad.com/l/plan-7-noches?wanted=true&amp;price=0" rel="noopener">Descargar el plan gratis →</a>
+  <!-- Direct PDF (2026-11-07): Gumroad's email checkout got 39 views → 0 downloads.
+       The PDF lives under /go/7-noches-pdf/ so the go-click-logger worker counts every open
+       as slug "7-noches-pdf"; the script below forwards ?src= so the channel is kept. -->
+  <a class="btn pdf" href="/go/7-noches-pdf/Plan-7-Noches-Dormir-Mejor.pdf">Descargar el plan gratis →</a>
+  <p class="note">Se abre al momento. Guárdalo en tu teléfono o compártelo.</p>
+  <p class="note">Sin correo. Sin pagos.</p>
 
-  <section class="card">
-    <h2>Cómo descargarlo gratis (20 segundos)</h2>
-    <ol>
-      <li>Toca el botón de arriba. Se abre la página de descarga (en inglés) con <b>Total US$0</b>.</li>
-      <li>Escribe tu correo y toca <b>«Get»</b>.</li>
-      <li>El PDF se abre al momento y también te llega al correo. Guárdalo en tu teléfono.</li>
-    </ol>
-    <div class="mock" aria-hidden="true">
-      Total <b style="float:right;color:#000">US$0</b>
-      <div class="field">Email address <b>← tu correo</b></div>
-      <div class="buy">Get</div>
-    </div>
-    <p class="note">Sin tarjeta. Sin pagos.</p>
-  </section>
-
-  <a class="btn bottom" href="https://stonekeeper860.gumroad.com/l/plan-7-noches?wanted=true&amp;price=0" rel="noopener">Descargar el plan gratis →</a>
   <a class="back" href="/comoentender/">← Volver</a>
 </main>
+<script>
+  // Keep the visitor's source (?src=yt-ce-…, bio-comoentender) on the PDF click.
+  var src = new URLSearchParams(location.search).get("src");
+  if (src) document.querySelectorAll("a.pdf").forEach(function (a) {
+    a.href += "?src=" + encodeURIComponent(src);
+  });
+</script>
 </body>
 </html>
