@@ -26,7 +26,6 @@
   li { counter-increment: s; position: relative; padding-left: 34px; margin-bottom: 12px; font-size: 15px; }
   li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; border-radius: 50%;
                background: var(--accent); color: var(--accent-fg); font-weight: 700; font-size: 13px; text-align: center; line-height: 24px; }
-  /* Drawing of Gumroad's checkout box, so it looks familiar when they get there */
   .mock { margin: 6px 0 10px; background: #fff; color: #000; border: 1px solid #ddd; border-radius: 10px; padding: 12px; font-size: 13px; }
   .mock .field { margin-top: 6px; border: 2px solid #000; border-radius: 6px; padding: 6px 10px; color: #888; }
   .mock .field b { color: #e0115f; }
@@ -42,7 +41,7 @@
   <span class="tag">GRATIS</span>
   <h1>Duerme mejor en 7 noches: un paso cada noche</h1>
   <p class="sub">PDF gratis · 11 páginas · en español</p>
-  <!-- Direct PDF (2026-11-07): Gumroad's email checkout got 39 views → 0 downloads.
+  <!-- Direct PDF (2026-11-07): the old third-party email checkout got 39 views → 0 downloads.
        The PDF lives under /go/7-noches-pdf/ so the go-click-logger worker counts every open
        as slug "7-noches-pdf"; the script below forwards ?src= so the channel is kept. -->
   <a class="btn pdf" href="/go/7-noches-pdf/Plan-7-Noches-Dormir-Mejor.pdf">Descargar el plan gratis →</a>

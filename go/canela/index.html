@@ -26,7 +26,6 @@
   li { counter-increment: s; position: relative; padding-left: 34px; margin-bottom: 12px; font-size: 15px; }
   li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 24px; height: 24px; border-radius: 50%;
                background: var(--accent); color: var(--accent-fg); font-weight: 700; font-size: 13px; text-align: center; line-height: 24px; }
-  /* (old Gumroad checkout drawing styles, unused since the 2026-11-27 direct PDF) */
   .mock { margin: 6px 0 10px; background: #fff; color: #000; border: 1px solid #ddd; border-radius: 10px; padding: 12px; font-size: 13px; }
   .mock .field { margin-top: 6px; border: 2px solid #000; border-radius: 6px; padding: 6px 10px; color: #888; }
   .mock .field b { color: #e0115f; }
@@ -42,7 +41,7 @@
   <img class="cover" src="/go/canela/cover.png" alt="Canela de Ceilán vs. canela común">
   <h1>Canela de Ceilán vs. canela común</h1>
   <p class="sub">Guía gratis · cómo reconocerla en la tienda en 10 segundos</p>
-  <!-- Direct PDF (2026-11-27, Cesar): Gumroad's email checkout scared people off (7-noches: 0 downloads on Gumroad,
+  <!-- Direct PDF (2026-11-27, Cesar): the old third-party email checkout scared people off (7-noches: 0 downloads there,
        3 in 28 days once self-hosted). The PDF lives under /go/canela-pdf/ so the go-click-logger counts every open
        as slug "canela-pdf"; the script below forwards ?src= so the channel is kept. -->
   <a class="btn pdf" href="/go/canela-pdf/Canela-Ceilan-vs-Comun.pdf">Descargar la guía gratis →</a>
